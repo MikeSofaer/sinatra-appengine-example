@@ -1,6 +1,6 @@
 name:  Sinatra Bot
 capabilities:
-  DocumentEdit:
+  DOCUMENT_CHANGED:
 crons:
   whine: 20
   

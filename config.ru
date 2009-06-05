@@ -1,7 +1,7 @@
 require 'rubygems'
 require 'app'
  
-set :environment, :production
+set :environment, :development
 set :run, false
  
 run Sinatra::Application
