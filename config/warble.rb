@@ -11,7 +11,7 @@ Warbler::Config.new do |config|
  
   # Additional files/directories to include, above those in config.dirs
   # config.includes = FileList["db"]
-  config.includes = FileList["appengine-web.xml", "app.rb", "config.ru"]
+  config.includes = FileList["appengine-web.xml", "app.rb", "config.ru", "robot.yml"]
   # Additional files/directories to exclude
   # config.excludes = FileList["lib/tasks/*"]
  
@@ -35,7 +35,7 @@ Warbler::Config.new do |config|
   # The Rails gems are included by default unless the vendor/rails directory is present.
   # config.gems += ["activerecord-jdbcmysql-adapter", "jruby-openssl"]
   # config.gems << "tzinfo"
-  config.gems = ['sinatra', 'json-jruby']
+  config.gems = ['sinatra', 'json_pure']
  
   # Uncomment this if you don't want to package rails gem.
   # config.gems -= ["rails"]

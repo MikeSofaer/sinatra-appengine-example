@@ -8,20 +8,20 @@ end
 
 get '/_wave/capabilities.xml' do
   begin
-    robot.capabilities.to_s
+    robot.capabilities
   rescue
     $!
   end
 end
 
 get '/_wave/robot/:command' do
-  robot.run_command(params[:command])
-end
-
-get '/ping' do
-  robot.to_s
+  begin
+    robot.run_command(params[:command])
+  rescue => e
+    e.message
+  end	
 end
 
 def robot
-  Robot.new('Bob')
+  Robot.from_yml('robot.yml')  
 end

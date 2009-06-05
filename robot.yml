@@ -1,0 +1,6 @@
+name:  Sinatra Bot
+capabilities:
+  DocumentEdit:
+crons:
+  whine: 20
+  
